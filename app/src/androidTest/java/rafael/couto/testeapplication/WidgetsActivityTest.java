@@ -23,21 +23,22 @@ public class WidgetsActivityTest extends BaseUITest{
     public void widgetsPresentTest(){
         onView(withId(R.id.btnForm)).perform(click());
 
-        onView(withId(R.id.etName)).check(matches(isDisplayed()));
-        onView(withId(R.id.etSurname)).check(matches(isDisplayed()));
-        onView(withId(R.id.etAge)).check(matches(isDisplayed()));
-        onView(withId(R.id.etAddress)).check(matches(isDisplayed()));
-        onView(withId(R.id.cbNewsletter)).check(matches(isDisplayed()));
-        onView(withId(R.id.cbNewsletter)).check(matches(withText("Newsletter?")));
-        onView(withId(R.id.rgGender)).check(matches(isDisplayed()));
-        onView(withId(R.id.rbFemale)).check(matches(isDisplayed()));
-        onView(withId(R.id.rbMale)).check(matches(isDisplayed()));
-        onView(withId(R.id.rbFemale)).check(matches(withText("Female")));
-        onView(withId(R.id.rbMale)).check(matches(withText("Male")));
-        onView(withId(R.id.spDevices)).check(matches(isDisplayed()));
-        onView(withId(R.id.spDevices)).check(matches(withText("Married?")));
-        onView(withId(R.id.swMarried)).check(matches(isDisplayed()));
-        onView(withId(R.id.btnSave)).check(matches(isDisplayed()));
+        onView(withId(R.id.etName)).perform(scrollTo()).check(matches(isDisplayed()));
+        onView(withId(R.id.etSurname)).perform(scrollTo()).check(matches(isDisplayed()));
+        onView(withId(R.id.etAge)).perform(scrollTo()).check(matches(isDisplayed()));
+        onView(withId(R.id.etAddress)).perform(scrollTo()).check(matches(isDisplayed()));
+        onView(withId(R.id.cbNewsletter)).perform(scrollTo()).check(matches(isDisplayed()));
+        onView(withId(R.id.cbNewsletter)).perform(scrollTo()).check(matches(withText("Newsletter?")));
+        onView(withId(R.id.rgGender)).perform(scrollTo()).check(matches(isDisplayed()));
+        onView(withId(R.id.rbFemale)).perform(scrollTo()).check(matches(isDisplayed()));
+        onView(withId(R.id.rbMale)).perform(scrollTo()).check(matches(isDisplayed()));
+        onView(withId(R.id.rbFemale)).perform(scrollTo()).check(matches(withText("Female")));
+        onView(withId(R.id.rbMale)).perform(scrollTo()).check(matches(withText("Male")));
+        onView(withId(R.id.spDevices)).perform(scrollTo()).check(matches(isDisplayed()));
+        onView(withId(R.id.spDevices)).check(matches(withSpinnerText("One")));
+        onView(withId(R.id.swMarried)).perform(scrollTo()).check(matches(isDisplayed()));
+        onView(withId(R.id.swMarried)).check(matches(withText("Married?")));
+        onView(withId(R.id.btnSave)).perform(scrollTo()).check(matches(isDisplayed()));
     }
 
     @Test
